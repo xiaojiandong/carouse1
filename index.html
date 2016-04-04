@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>焦点轮播图</title>
+		<meta name="description" content="">
+		<meta name="author" content="Administrator">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="index.css" type="text/css" media="screen" charset="utf-8"/>
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<h2>焦点轮播图：定时器，无限滚动，动画效果，函数递归</h2>
+		<!--创建父div，内部有3个子元素-->
+		<div id="container">
+		   <!--1 子元素，包含了7张图，5张实图2张附属图-->
+            <div id="list" style="left: -600px;">
+            	 <img src="img/5.jpg" />
+            	 <img src="img/1.jpg" />
+            	 <img src="img/2.jpg" />
+            	 <img src="img/3.jpg" />
+            	 <img src="img/4.jpg" />
+            	 <img src="img/5.jpg" />
+            	 <img src="img/1.jpg" />
+            </div>
+			<!--2 子元素，包含了5个span按钮，自定义value属性-->
+			<div id="buttons">
+				<span index="1" class="on"></span>
+				<span index="2"></span>
+				<span index="3"></span>
+				<span index="4"></span>
+				<span index="5"></span>
+			</div>
+			<!--3 子元素，两个左右切换箭头-->
+			<a href="javascript:;" id="prev" class="arrow">&lt;</a> <!--左箭头-->
+			<a href="javascript:;" id="next" class="arrow">&gt;</a>  <!--右箭头-->
+		</div>
+		
+	</body>
+</html>

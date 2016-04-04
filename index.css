@@ -1,0 +1,82 @@
+*{
+	font-family: '微软雅黑';
+}
+h2{
+	text-align: center;
+}
+/* 父元素container样式*/
+#container{
+	width:600px; /* 父元素的宽高必须和子元素img的宽高匹配 */
+	height:400px;
+	margin: 0 auto;
+	padding: 0;
+	border: 2px solid red;
+	position: relative;
+	overflow:hidden;
+}
+/* 子元素list样式*/
+#list{
+	width:4200px; /* width=600*7=4200 （2张附属图5张实图）*/
+	height:400px;
+	position: absolute;
+	z-index: 1; /* 位于最低层的absolute*/
+}
+/* 子元素list下7张图片的样式*/
+#list img{
+	float:left;
+	width:600px; 
+	height:400px;
+}
+/* 子元素id为buttons的div样式*/
+#buttons{
+	width:100px;
+	height:10px;
+    position:absolute;
+    z-index: 2; /* 该absolute定位位于中间层*/
+    bottom: 20px;
+    left: 250px;
+}
+/* 子元素buttons下5个span按钮的样式*/
+#buttons span{
+	float:left;
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	margin-right:8px;
+	cursor:pointer; /* 鼠标浮到span小圆点上的样式为指针状*/
+	border:1px solid #fff;
+	background: #333;
+}
+/* 当前span按钮高亮时的样式 */
+#buttons .on{
+	background: orangered;
+}
+/* 子元素两个箭头的样式*/
+.arrow{
+	width: 40px;
+    height: 40px;
+	cursor:pointer;
+	display:none;
+	line-height: 39px; /* 使两个箭头水平并居中*/
+	text-align:center;
+	font-size: 36px; 
+	font-weight: bold;
+	position: absolute; 
+	top:180px;
+	z-index: 2;
+	color: #fff;
+	background-color: RGBA(0,0,0,0.3); /* 透明度0.3*/
+	/*text-decoration:none;*/
+}
+/* 箭头hover的样式*/
+.arrow:hover{
+	background-color: RGBA(0,0,0,0.7); /* 透明度0.7*/
+}	
+#container:hover .arrow{
+	display:block;
+}
+#prev{left:20px;}
+#next{right: 20px;}
+
+
+
